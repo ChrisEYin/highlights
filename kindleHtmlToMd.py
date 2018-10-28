@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-with open("raw/new/Why Don't We Learn from History_ - Notebook.html", "r") as f:
+with open("raw/done/Thinking in Systems_ A Primer - Notebook.html", "r") as f:
   contents = f.read()
   soup = BeautifulSoup(contents, 'lxml')
 
@@ -15,7 +15,6 @@ unicode_author = unicode(author.string)
 clean_author = unicode_author.strip()
 clean_author_split = clean_author.split(',')
 author_name = clean_author_split[1] + " " + clean_author_split[0]
-
 
 highlights = soup.findAll("div", {"class": "noteText"})
 #for highlight in highlights:
