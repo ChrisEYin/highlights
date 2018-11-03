@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-with open("raw/done/Thinking in Systems_ A Primer - Notebook.html", "r") as f:
+with open("raw/new/Ogilvy on Advertising - Notebook.html", "r") as f:
   contents = f.read()
   soup = BeautifulSoup(contents, 'lxml')
 
@@ -20,7 +20,7 @@ highlights = soup.findAll("div", {"class": "noteText"})
 #for highlight in highlights:
 #	map(unicode,highlights)
 
-with open("output/why-dont-we-learn-from-history.md", "w") as f:
+with open("output/ogilvy-on-advertising.md", "w") as f:
     f.write("---" + "\n")
     f.write("title: " + str(clean_title) + "\n")
     # f.write("title: " + str(final_title) + "\n")
